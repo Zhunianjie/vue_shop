@@ -59,7 +59,8 @@ export default {
     login () {
       this.$refs.loginFormRef.validate(valid => {
         if (!valid) return
-        this.$http.post()
+        const {} = await this.$http.post("login", this.loginForm);
+        console.log(res);
       })
     }
   }
